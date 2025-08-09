@@ -6,12 +6,16 @@ const Navbar = ({ currentPage, onChangePage }) => {
       ? "font-semibold underline cursor-pointer"
       : "hover:underline cursor-pointer";
 
-  // Smooth scroll helper
   const handleScroll = (id, page) => {
+    if (id === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      onChangePage(page);
+      return;
+    }
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      onChangePage(page); // update active link styling
+      onChangePage(page);
     }
   };
 
@@ -20,20 +24,20 @@ const Navbar = ({ currentPage, onChangePage }) => {
       <div className="mx-2 flex justify-between items-center">
         <div
           className="text-xl font-bold cursor-pointer"
-          onClick={() => handleScroll("home", "home")}
+          onClick={() => handleScroll("top", "home")}
         >
           🛒 Review App
         </div>
         <div className="space-x-6">
           <span
             className={linkClass("home")}
-            onClick={() => handleScroll("home", "home")}
+            onClick={() => handleScroll("top", "home")}
           >
             Home
           </span>
           <span
-            className={linkClass("home")}
-            onClick={() => handleScroll("home", "home")}
+            className={linkClass("add")}
+            onClick={() => handleScroll("home", "add")}
           >
             Add Review
           </span>
