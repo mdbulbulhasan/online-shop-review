@@ -89,7 +89,7 @@ const ReviewForm = ({
         <div className="flex space-x-4">
           <button
             type="submit"
-            className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition"
+            className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition cursor-pointer"
             disabled={selectedRating === 0}
           >
             {editReview ? "Update Review" : "Submit Review"}
@@ -99,7 +99,7 @@ const ReviewForm = ({
             <button
               type="button"
               onClick={onCancelEdit}
-              className="flex-1 bg-gray-400 hover:bg-gray-500 text-white font-semibold py-3 rounded-lg transition"
+              className="flex-1 bg-gray-400 hover:bg-gray-500 text-white font-semibold py-3 rounded-lg transition cursor-pointer"
             >
               Cancel
             </button>
