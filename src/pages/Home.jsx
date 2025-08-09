@@ -52,7 +52,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-indigo-700 my-4 text-center">
+      <h1 className="text-3xl font-bold text-indigo-700 my-4 text-center border-b border-gray-300 pb-2">
         Welcome to Review App — Trusted Reviews, Real Experiences.
       </h1>
 

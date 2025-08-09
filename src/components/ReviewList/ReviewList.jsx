@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, Store } from "lucide-react";
 
 const ReviewList = ({ reviews, onDelete, onEdit }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -29,13 +29,11 @@ const ReviewList = ({ reviews, onDelete, onEdit }) => {
       </h2>
 
       <div className="flex flex-col md:flex-row gap-6">
-        {/* Sidebar */}
         <aside className="md:w-1/4 p-4 bg-indigo-50 rounded-2xl border border-indigo-100 shadow-sm space-y-6">
           <h3 className="text-lg font-semibold text-indigo-700">
             Filter Reviews
           </h3>
 
-          {/* Search by Shop */}
           <div>
             <label className="block mb-1 font-medium text-indigo-700">
               Shop Name
@@ -49,7 +47,6 @@ const ReviewList = ({ reviews, onDelete, onEdit }) => {
             />
           </div>
 
-          {/* Minimum Rating */}
           <div>
             <label className="block mb-1 font-medium text-indigo-700">
               Minimum Rating
@@ -67,7 +64,6 @@ const ReviewList = ({ reviews, onDelete, onEdit }) => {
             </select>
           </div>
 
-          {/* Sort by Date */}
           <div>
             <label className="block mb-1 font-medium text-indigo-700">
               Sort by Date
@@ -83,24 +79,22 @@ const ReviewList = ({ reviews, onDelete, onEdit }) => {
           </div>
         </aside>
 
-        {/* Reviews Section */}
         <main className="flex-1">
           {filteredReviews.length === 0 ? (
             <p className="text-center text-gray-500 italic mt-6">
               No Reviews Yet
             </p>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {filteredReviews.map((review) => (
                 <div
                   key={review.id}
                   className="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden border border-gray-100 group flex flex-col"
                 >
-                  {/* Top section */}
                   <div className="bg-gradient-to-r from-indigo-50 to-white px-5 py-4 border-b border-gray-100">
                     <div className="flex items-center justify-between">
-                      <h3 className="text-lg font-bold text-indigo-800 group-hover:text-indigo-900 transition-colors duration-200">
-                        🏬 {review.shop}
+                      <h3 className="flex gap-2 text-lg font-bold text-indigo-800 group-hover:text-indigo-900 transition-colors duration-200">
+                        <Store /> {review.shop}
                       </h3>
                       <div className="flex items-center space-x-1 text-yellow-500">
                         {Array.from({ length: Number(review.rating) }).map(
@@ -117,9 +111,7 @@ const ReviewList = ({ reviews, onDelete, onEdit }) => {
                     </small>
                   </div>
 
-                  {/* Body content */}
                   <div className="p-5 flex flex-col justify-between flex-1">
-                    {/* Review text */}
                     <div className="relative bg-indigo-50 p-4 rounded-lg border border-indigo-100">
                       <Quote
                         size={18}
