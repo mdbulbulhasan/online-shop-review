@@ -51,22 +51,33 @@ const Home = () => {
   };
 
   return (
-    <div class>
-      <div ref={formRef}>
+    <div>
+      <h1 className="text-3xl font-bold text-indigo-700 mb-4 text-center">
+        Welcome to Review App
+      </h1>
+
+      {/* Section for Add Review Form */}
+      <section
+        id="home"
+        ref={formRef}
+        className="p-6 bg-white shadow-2xl rounded-2xl my-10 max-w-3xl mx-auto"
+      >
         <ReviewForm
           onAddReview={handleAddReview}
           editReview={editReview}
           onUpdateReview={handleUpdateReview}
           onCancelEdit={handleCancelEdit}
         />
-      </div>
-      <div className="max-w-[95%] mx-auto flex justify-between items-center">
+      </section>
+
+      {/* Section for Reviews List */}
+      <section id="reviews" className="mx-2 p-6">
         <ReviewList
           reviews={reviews}
           onDelete={handleDeleteReview}
           onEdit={handleEditReview}
         />
-      </div>
+      </section>
     </div>
   );
 };

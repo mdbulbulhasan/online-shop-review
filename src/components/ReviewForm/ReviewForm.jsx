@@ -49,7 +49,7 @@ const ReviewForm = ({
       <form
         key={formKey}
         onSubmit={handleSubmit}
-        className="w-full max-w-3xl mx-auto bg-white p-4 md:p-6 rounded-2xl shadow-md space-y-5 border border-gray-100"
+        className="w-full max-w-3xl mx-auto p-4 md:p-6 rounded-2xl space-y-5"
       >
         <input
           className="w-full p-3 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
@@ -67,14 +67,14 @@ const ReviewForm = ({
           required
         ></textarea>
 
-        {/* Custom Star Rating */}
+
         <div className="flex space-x-1 cursor-pointer">
           {[1, 2, 3, 4, 5].map((star) => (
             <Star
               key={star}
               size={28}
               fill={star <= selectedRating ? "currentColor" : "none"}
-              stroke={star <= selectedRating ? "#fbbf24" : "#9ca3af"} // Yellow or Gray
+              stroke={star <= selectedRating ? "#fbbf24" : "#9ca3af"}
               className="transition-colors"
               onClick={() => setSelectedRating(star)}
               onKeyDown={(e) => {
@@ -91,7 +91,7 @@ const ReviewForm = ({
           <button
             type="submit"
             className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition"
-            disabled={selectedRating === 0} // optionally disable submit if no rating
+            disabled={selectedRating === 0}
           >
             {editReview ? "Update Review" : "Submit Review"}
           </button>

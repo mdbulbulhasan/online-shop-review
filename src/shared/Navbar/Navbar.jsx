@@ -17,7 +17,7 @@ const Navbar = ({ currentPage, onChangePage }) => {
 
   return (
     <nav className="bg-indigo-600 text-white px-6 py-3 shadow sticky top-0 z-50">
-      <div className="max-w-[95%] mx-auto flex justify-between items-center">
+      <div className="mx-2 flex justify-between items-center">
         <div
           className="text-xl font-bold cursor-pointer"
           onClick={() => handleScroll("home", "home")}
@@ -32,8 +32,8 @@ const Navbar = ({ currentPage, onChangePage }) => {
             Home
           </span>
           <span
-            className={linkClass("add")}
-            onClick={() => handleScroll("add", "add")}
+            className={linkClass("home")}
+            onClick={() => handleScroll("home", "home")}
           >
             Add Review
           </span>
