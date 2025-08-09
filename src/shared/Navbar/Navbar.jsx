@@ -8,7 +8,7 @@ const Navbar = ({ currentPage, onChangePage }) => {
          before:absolute before:-bottom-1 before:left-0 before:w-full before:h-0.5
          before:rounded before:bg-indigo-400 before:opacity-80
          cursor-pointer`
-      : `text-gray-200 hover:text-indigo-300 cursor-pointer transition-colors duration-300`;
+      : `text-white hover:text-indigo-300 cursor-pointer transition-colors duration-300`;
 
   const handleScroll = (id, page) => {
     if (id === "top") {
@@ -24,16 +24,19 @@ const Navbar = ({ currentPage, onChangePage }) => {
   };
 
   return (
-    <nav className="bg-indigo-800 text-gray-200 px-6 py-3 shadow-md sticky top-0 z-50">
+    <nav className="bg-indigo-800 text-white px-6 py-3 shadow-md sticky top-0 z-50">
       <div className="mx-2 flex justify-between items-center">
         <div
-          className="flex items-center gap-2 text-xl font-semibold cursor-pointer text-indigo-200 hover:text-indigo-300 transition-colors duration-300"
+          className="flex items-center gap-2 text-xl font-semibold cursor-pointer text-white hover:text-indigo-300 transition-colors duration-300"
           onClick={() => handleScroll("top", "home")}
         >
-          <Logo></Logo> {" "}
-          ShopSmart Reviews
+          Shop
+          <span>
+            <Logo></Logo>
+          </span>
+          Smart
         </div>
-        <div className="space-x-8 text-lg flex">
+        <div className="space-x-8 text-lg flex ">
           <span
             className={linkClass("home")}
             onClick={() => handleScroll("top", "home")}
