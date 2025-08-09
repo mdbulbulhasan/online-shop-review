@@ -43,7 +43,7 @@ const ReviewForm = ({
   return (
     <div>
       <h2 className="text-xl font-semibold text-indigo-700 mb-4 text-center">
-        Share Your Experience: Submit or Update Your Shop Review
+        Share Your Experience, Shape the Community
       </h2>
 
       <form
@@ -66,7 +66,6 @@ const ReviewForm = ({
           defaultValue={editReview ? editReview.review : ""}
           required
         ></textarea>
-
 
         <div className="flex space-x-1 cursor-pointer">
           {[1, 2, 3, 4, 5].map((star) => (

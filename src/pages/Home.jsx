@@ -52,8 +52,8 @@ const Home = () => {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-indigo-700 mb-4 text-center">
-        Welcome to Review App
+      <h1 className="text-3xl font-bold text-indigo-700 my-4 text-center">
+        Welcome to Review App — Trusted Reviews, Real Experiences.
       </h1>
 
       {/* Section for Add Review Form */}

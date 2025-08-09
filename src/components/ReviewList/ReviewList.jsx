@@ -24,9 +24,9 @@ const ReviewList = ({ reviews, onDelete, onEdit }) => {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-indigo-700 mb-6 text-center">
-  Verified Reviews to Help You Shop Smarter
-</h2>
+      <h2 className="text-2xl font-bold text-indigo-700 mb-6 text-center border-b border-gray-300 pb-2">
+        Verified Reviews to Help You Shop Smarter
+      </h2>
 
       <div className="flex flex-col md:flex-row gap-6">
         {/* Sidebar */}

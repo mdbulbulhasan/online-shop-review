@@ -16,7 +16,7 @@ const Navbar = ({ currentPage, onChangePage }) => {
   };
 
   return (
-    <nav className="bg-indigo-600 text-white px-6 py-3 shadow sticky top-0 z-50">
+    <nav className="bg-indigo-600 text-white px-6 py-3 shadow-2xl sticky top-0 z-50">
       <div className="mx-2 flex justify-between items-center">
         <div
           className="text-xl font-bold cursor-pointer"
