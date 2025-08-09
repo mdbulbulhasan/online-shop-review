@@ -16,9 +16,18 @@ export function addReview(newReview) {
   return updated;
 }
 
+export function updateReviews(updatedReview) {
+  const currentReviews = getReviews();
+  const updated = currentReviews.map((review) =>
+    review.id === updatedReview.id ? updatedReview : review
+  );
+  saveReviews(updated);
+  return updated;
+}
+
 export function deleteReviewById(id) {
-    const currentReviews = getReviews();
-    const updated = currentReviews.filter(review => review.id !== id);
-    saveReviews(updated);
-    return updated;
+  const currentReviews = getReviews();
+  const updated = currentReviews.filter((review) => review.id !== id);
+  saveReviews(updated);
+  return updated;
 }
