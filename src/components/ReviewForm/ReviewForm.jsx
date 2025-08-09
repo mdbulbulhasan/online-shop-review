@@ -72,9 +72,9 @@ const ReviewForm = ({
             <Star
               key={star}
               size={28}
-              fill={star <= selectedRating ? "currentColor" : "none"}
-              stroke={star <= selectedRating ? "#fbbf24" : "#9ca3af"}
-              className="transition-colors"
+              fill={star <= selectedRating ? "#fbbf24" : "#9ca3af"}
+              stroke="none"
+              className="transition-colors focus:outline-none"
               onClick={() => setSelectedRating(star)}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") setSelectedRating(star);
