@@ -4,9 +4,9 @@ import { Star, Quote, Store } from "lucide-react";
 const ReviewList = ({ reviews, onDelete, onEdit }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [minRating, setMinRating] = useState(1);
-  const [sortOrder, setSortOrder] = useState("newest"); // newest or oldest
+  const [sortOrder, setSortOrder] = useState("newest");
 
-  // Filter and sort reviews
+
   const filteredReviews = useMemo(() => {
     return reviews
       .filter(

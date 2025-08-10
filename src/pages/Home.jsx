@@ -12,7 +12,7 @@ const Home = () => {
   const [reviews, setReviews] = useState([]);
   const [editReview, setEditReview] = useState(null);
 
-  // Ref to the form container
+
   const formRef = useRef(null);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const Home = () => {
   const handleEditReview = (review) => {
     setEditReview(review);
 
-    // Scroll to form smoothly after state update
+
     setTimeout(() => {
       if (formRef.current) {
         formRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -56,7 +56,7 @@ const Home = () => {
         Welcome to Review App — Trusted Reviews, Real Experiences.
       </h1>
 
-      {/* Section for Add Review Form */}
+
       <section
         id="home"
         ref={formRef}
@@ -70,7 +70,7 @@ const Home = () => {
         />
       </section>
 
-      {/* Section for Reviews List */}
+
       <section id="reviews" className="mx-2 p-6">
         <ReviewList
           reviews={reviews}
