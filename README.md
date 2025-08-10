@@ -1,9 +1,9 @@
-# 🛍️ Online Shop Experience Review App - ##ShopMart##
+# 🛍️ Online Shop Experience Review App - ##ShopSMart##
 
 This is a simple React app where users can **submit**, **view**, **edit**, and **delete** reviews about their online shopping experiences.  
 Users can also **search reviews by shop name**, and **filter reviews by rating** or **by date**, making it easy to find specific feedback.
 
-## Live Demo- [Live Demo](https://online-shop-review.vercel.app/)
+## Live Demo- [ShopSMart](https://online-shop-review.vercel.app/)
 
 ## 📌 Project Overview
 This app allows users to:
